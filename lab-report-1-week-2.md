@@ -7,19 +7,19 @@ how to log into their `ieng6` account, in the most brutally honest way.
 ## Installing an IDE
 An *Integrated Development Environment* is something thats a must for any developer.
 
-The one I use and recommend is literally any one by (JetBrains)[https://www.jetbrains.com/].
+The one I use and recommend is literally any one by [JetBrains](https://www.jetbrains.com/).
 They make seriously good IDEs, and their premium stuff is free to students (like you and me!).
-You can apply for a free license (here)[https://www.jetbrains.com/shop/eform/students].
+You can apply for a free license [here](https://www.jetbrains.com/shop/eform/students).
 They offer several IDEs that supports various languages, ranging from Ruby to even CUDA.
 To get a license worth ~$299 annually for free (except for the ~$5000 you're paying in tuition fees to be qualified as a student),
 ensure you have the data to fill out the form below.
 
 ![JetBrains](https://anishg24.github.io/cse15l-lab-reports/assets/sc3.png)
 
-What lots of people will say they use is (Visual Studio Code)[https://code.visualstudio.com/].
+What lots of people will say they use is [Visual Studio Code](https://code.visualstudio.com/).
 Visual Studio Code is a **code editor, not an IDE**. What's the difference? An IDE contains a code editor,
 but a code editor doesn't contain an IDE.
-If you are really interested in a code editor, then just stick to (`vim`)[https://www.vim.org/],
+If you are really interested in a code editor, then just stick to [`vim`](https://www.vim.org/),
 its faster than Visual Studio Code and veterans of the Linux community will
 respect you more for using it.
 
