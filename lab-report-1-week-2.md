@@ -138,7 +138,10 @@ ssh <ACCOUNT NAME>@ieng6.ucsd.edu "gcc main.cpp -o main; ./main"
 Notice the addition of the semicolon. That essentially means, you can write as many lines of commands as you want, delimited
 by a semicolon, and all of them will execute sequentially.
 
-You can see an example here:
+We will first move our C++ file over to the server:
+![C++](https://anishg24.github.io/cse15l-lab-reports/assets/sc5.png)
+
+Then remotely run it without even logging in:
 ![C++](https://anishg24.github.io/cse15l-lab-reports/assets/sc6.png)
 
 [1]: https://sdacs.ucsd.edu/~icc/index.php
