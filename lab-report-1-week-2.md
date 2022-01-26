@@ -64,7 +64,7 @@ Try out these commands in your remote account:
 - `mkdir`: Make a new directory
 - `rm`: Removes a file
 - `cp`: Copies a file
-For more examples, check out what (Ubuntu posted)[https://ubuntu.com/tutorials/command-line-for-beginners#1-overview]!
+For more examples, check out what [Ubuntu posted](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)!
 You can see below (don't worry if your terminal doesn't look like mine) of some commands run
 ![Examples](https://anishg24.github.io/cse15l-lab-reports/assets/sc4.png)
 
@@ -78,7 +78,7 @@ This is here only for your knowledge to **NOT** get tricked by your friends to r
 Now that you're a bit more familiar with your remote server, lets move some files over.
 
 ## Moving Files With SCP
-No, we aren't talking about the (SCP Foundation)[https://en.wikipedia.org/wiki/SCP_Foundation]. This is
+No, we aren't talking about the [SCP Foundation](https://en.wikipedia.org/wiki/SCP_Foundation). This is
 the *Secure CoPy* (`scp`) protocol. We use `scp` to transfer files from our computer to the remote server.
 To do this, we need to run:
 ```shell
