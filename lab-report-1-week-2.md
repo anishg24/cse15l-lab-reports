@@ -48,7 +48,7 @@ fees of course! How do you get the most out of your money?
 
 ### Accessing Your Remote Server
 1. Open the Terminal (or any emulator or replacement) and execute the following command:
-```
+```shell
 ssh <ACCOUNT NAME>@ieng6.ucsd.edu
 ```
 2. When prompted for a password, enter the password you set. Your password won't show in the terminal, but the keystrokes are recorded correctly
@@ -81,7 +81,7 @@ Now that you're a bit more familiar with your remote server, lets move some file
 No, we aren't talking about the (SCP Foundation)[https://en.wikipedia.org/wiki/SCP_Foundation]. This is
 the *Secure CoPy* (`scp`) protocol. We use `scp` to transfer files from our computer to the remote server.
 To do this, we need to run:
-```
+```shell
 scp file.txt <ACCOUNT NAME>@ieng6.ucsd.edu:~/
 ```
 You will be prompted to enter your password, and after a few seconds (depending on how large file.txt is),
@@ -125,14 +125,14 @@ If it doesn't ask you for a password, then you did it!
 Sometimes when you want to run something on a server, you don't want to be hassled with logging
 into the server, then typing the command there. Don't worry, us lazy developers figured that out too!
 You can run:
-```
+```shell
 ssh <ACCOUNT NAME>@ieng6.ucsd.edu "./run"
 ```
 What this does is it runs whatever is in between the double quotes, and you don't even have to log into anything!
 
 But what if you're using a compiled language, like C++ or FORTRAN? How can you compile, link, and run all at the same time?
-Well, we can use something very predominant in C++, the semicolon.
-```
+Well, we can use something very predominant in most programming languages, the semicolon.
+```shell
 ssh <ACCOUNT NAME>@ieng6.ucsd.edu "gcc main.cpp -o main; ./main"
 ```
 Notice the addition of the semicolon. That essentially means, you can write as many lines of commands as you want, delimited
@@ -143,5 +143,12 @@ We will first move our C++ file over to the server:
 
 Then remotely run it without even logging in:
 ![C++](https://anishg24.github.io/cse15l-lab-reports/assets/sc6.png)
+
+Now you may ask, how is this optimized? I still have to run 2 commands seperately, totaling a whopping **108 keystrokes** to type the first time.
+(And 4 keystrokes for subsequent executions, `([UP] + [ENTER]) * 2` = `4`) There's gotta be a shorter way! Well, for the low low price of 2 extra keystrokes (totalling to **110 keystrokes**), you can write it all in one line with a semicolon, and only have to press 2 keys (`[UP]` and `[ENTER]`) to rerun the same code.
+
+```shell
+scp <ACCOUNT NAME>@ieng6.ucsd.edu:~/; ssh <ACCOUNT NAME>@ieng6.ucsd.edu "gcc main.cpp -o main; ./main"
+```
 
 [1]: https://sdacs.ucsd.edu/~icc/index.php
