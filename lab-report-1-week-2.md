@@ -7,19 +7,19 @@ how to log into their `ieng6` account, in the most brutally honest way.
 ## Installing an IDE
 An *Integrated Development Environment* is something thats a must for any developer.
 
-The one I use and recommend is literally any one by (JetBrains)[https://www.jetbrains.com/].
+The one I use and recommend is literally any one by [JetBrains](https://www.jetbrains.com/).
 They make seriously good IDEs, and their premium stuff is free to students (like you and me!).
-You can apply for a free license (here)[https://www.jetbrains.com/shop/eform/students].
+You can apply for a free license [here](https://www.jetbrains.com/shop/eform/students).
 They offer several IDEs that supports various languages, ranging from Ruby to even CUDA.
 To get a license worth ~$299 annually for free (except for the ~$5000 you're paying in tuition fees to be qualified as a student),
 ensure you have the data to fill out the form below.
 
 ![JetBrains](https://anishg24.github.io/cse15l-lab-reports/assets/sc3.png)
 
-What lots of people will say they use is (Visual Studio Code)[https://code.visualstudio.com/].
+What lots of people will say they use is [Visual Studio Code](https://code.visualstudio.com/).
 Visual Studio Code is a **code editor, not an IDE**. What's the difference? An IDE contains a code editor,
 but a code editor doesn't contain an IDE.
-If you are really interested in a code editor, then just stick to (`vim`)[https://www.vim.org/],
+If you are really interested in a code editor, then just stick to [`vim`](https://www.vim.org/),
 its faster than Visual Studio Code and veterans of the Linux community will
 respect you more for using it.
 
@@ -48,7 +48,7 @@ fees of course! How do you get the most out of your money?
 
 ### Accessing Your Remote Server
 1. Open the Terminal (or any emulator or replacement) and execute the following command:
-```
+```shell
 ssh <ACCOUNT NAME>@ieng6.ucsd.edu
 ```
 2. When prompted for a password, enter the password you set. Your password won't show in the terminal, but the keystrokes are recorded correctly
@@ -64,7 +64,7 @@ Try out these commands in your remote account:
 - `mkdir`: Make a new directory
 - `rm`: Removes a file
 - `cp`: Copies a file
-For more examples, check out what (Ubuntu posted)[https://ubuntu.com/tutorials/command-line-for-beginners#1-overview]!
+For more examples, check out what [Ubuntu posted](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)!
 You can see below (don't worry if your terminal doesn't look like mine) of some commands run
 ![Examples](https://anishg24.github.io/cse15l-lab-reports/assets/sc4.png)
 
@@ -78,10 +78,10 @@ This is here only for your knowledge to **NOT** get tricked by your friends to r
 Now that you're a bit more familiar with your remote server, lets move some files over.
 
 ## Moving Files With SCP
-No, we aren't talking about the (SCP Foundation)[https://en.wikipedia.org/wiki/SCP_Foundation]. This is
+No, we aren't talking about the [SCP Foundation](https://en.wikipedia.org/wiki/SCP_Foundation). This is
 the *Secure CoPy* (`scp`) protocol. We use `scp` to transfer files from our computer to the remote server.
 To do this, we need to run:
-```
+```shell
 scp file.txt <ACCOUNT NAME>@ieng6.ucsd.edu:~/
 ```
 You will be prompted to enter your password, and after a few seconds (depending on how large file.txt is),
@@ -125,20 +125,30 @@ If it doesn't ask you for a password, then you did it!
 Sometimes when you want to run something on a server, you don't want to be hassled with logging
 into the server, then typing the command there. Don't worry, us lazy developers figured that out too!
 You can run:
-```
+```shell
 ssh <ACCOUNT NAME>@ieng6.ucsd.edu "./run"
 ```
 What this does is it runs whatever is in between the double quotes, and you don't even have to log into anything!
 
 But what if you're using a compiled language, like C++ or FORTRAN? How can you compile, link, and run all at the same time?
-Well, we can use something very predominant in C++, the semicolon.
-```
+Well, we can use something very predominant in most programming languages, the semicolon.
+```shell
 ssh <ACCOUNT NAME>@ieng6.ucsd.edu "gcc main.cpp -o main; ./main"
 ```
 Notice the addition of the semicolon. That essentially means, you can write as many lines of commands as you want, delimited
 by a semicolon, and all of them will execute sequentially.
 
-You can see an example here:
+We will first move our C++ file over to the server:
+![C++](https://anishg24.github.io/cse15l-lab-reports/assets/sc5.png)
+
+Then remotely run it without even logging in:
 ![C++](https://anishg24.github.io/cse15l-lab-reports/assets/sc6.png)
+
+Now you may ask, how is this optimized? I still have to run 2 commands seperately, totaling a whopping **108 keystrokes** to type the first time.
+(And 4 keystrokes for subsequent executions, `([UP] + [ENTER]) * 2` = `4`) There's gotta be a shorter way! Well, for the low low price of 2 extra keystrokes (totalling to **110 keystrokes**), you can write it all in one line with a semicolon, and only have to press 2 keys (`[UP]` and `[ENTER]`) to rerun the same code.
+
+```shell
+scp <ACCOUNT NAME>@ieng6.ucsd.edu:~/; ssh <ACCOUNT NAME>@ieng6.ucsd.edu "gcc main.cpp -o main; ./main"
+```
 
 [1]: https://sdacs.ucsd.edu/~icc/index.php
