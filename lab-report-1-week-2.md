@@ -1,4 +1,4 @@
-# CSE 15L Lab 2
+# CSE 15L Lab Report 1
 
 ## Purpose
 To teach incoming and existing UCSD CSE 15L students using **macOS** machines
