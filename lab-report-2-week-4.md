@@ -22,7 +22,7 @@ So lets take a look at this matrix: `[a b c d]` which is very trivial
 [**Symptom:**](https://github.com/anishg24/markdown-parse/commit/16d6850ce86eaa9b114852f2e7d49276ab901896#commitcomment-64745789)
 ```
 $ javac -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar MarkdownParse.java
-$ java -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar MarkdownParse.java
+$ java -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParse.java
 
 ```
 *(Program would hang in an infinite loop)*
@@ -56,7 +56,7 @@ There's More.
 [**Symptom:**](https://github.com/anishg24/markdown-parse/commit/077333c995f5811d17ec11903d32fb01c45f9906#commitcomment-64746192)
 ```
 $ javac -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar MarkdownParse.java
-$ java -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar MarkdownParse.java
+$ java -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParse.java
 ["but not really", "https://google.com"]
 ```
 
@@ -78,7 +78,7 @@ The bug in this code was that we were looking for `]` and `(` separately. While 
 [**Symptom:**](https://github.com/anishg24/markdown-parse/commit/503b22f51cd69232ba55153130f10a58dfe08934#commitcomment-64746622)
 ```
 $ javac -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar MarkdownParse.java
-$ java -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar MarkdownParse.java
+$ java -cp .:lib/junit-4.13.2:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParse.java
 ["page.com"]
 ```
 
