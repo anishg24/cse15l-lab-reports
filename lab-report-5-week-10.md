@@ -79,13 +79,17 @@ So the winner? Seems to be my code with a 1-0 lead in this extremely biased comp
 We can fix it!
 
 #### Fixing `194.md`
-Since both implementations were wrong, and because I am a very benevolent and humble person, I will choose to fix the source code's implementation. Not because I am ashamed of looking at my code again, but solely because I am very generous
+Since both implementations were wrong, and because I am a very benevolent and humble person, I will choose to fix the source code's implementation. Not because I am ashamed of looking at my code again, but solely because I am very generous.
 
 Anyways, its clear that our bug lies in the original `getLinks()` method, so we will start by looking there.
+
+![](assets/sc-5-2.png)
 
 Most of the issue lies with determining the value of `openParen`, as that is the place where the substring starts. Its imperative that we choose openParen correctly such that it will grab the important part of the text. I think we should start checking for `:` as well as that's where the CommonMark's answer seems to start.
 
 #### Fixing `201.md`
 Since my implementation is right, I have no choice but to review the source code again.
+
+![](assets/sc-5-3.png)
 
 Once again, we will be within the original `getLinks()` method. The biggest issue I see here is that the code doesn't account for a space between the `]` and `(`. If there is a space between those two brackets, then we shouldn't even consider it to be a link. If we add this conditional, we can easily fix this bug.
